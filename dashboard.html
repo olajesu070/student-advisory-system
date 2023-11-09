@@ -27,7 +27,9 @@
             >
               Check Course with O level
             </div>
-            <div class="check-cgpa" onclick="toggleActive(this, 'check-cgpa')">Check GPA</div>
+            <div class="check-cgpa" onclick="toggleActive(this, 'check-cgpa')">
+              Check GPA
+            </div>
 
             <div
               class="send-a-message"
@@ -39,113 +41,223 @@
 
           <div class="content col-lg-8 bg-secondary">
             <div class="check-status content-section">
-               <div class="content col-lg-8 bg-secondary">
-            <div
-              class="header fs-2"
-              style="
-                font-size: 20px;
-                font-weight: 600;
-                align-items: center;
-                text-align: center;
-                margin-top: 25px;
-              "
-            >
-              All applicants who chose The Federal Polytechnic, Ado-Ekiti and
-              obtained a Minimum Acceptable Mark (MAM) of 140 in the 2023/2024
-              UTME.
-            </div>
-            <div
-              class="sub-header"
-              style="
-                font-size: 16px;
-                font-weight: 600;
-                align-items: center;
-                text-align: center;
-                margin-top: 25px;
-              "
-            >
-              <i>
-                kindly select your utme subject combination to check the
-                available courses for you O` Level</i
-              >
-              <div id="courseContent" class="content-section active">
-                <div class="this-is-a-content">courseContent</div>
-              </div>
-              <div id="cgpaContent" class="content-section">
-                <div class="this-is-a-content">cgpaContent</div>
-              </div>
-              <div id="messageContent" class="content-section">
-                <div class="this-is-a-content">messageContent</div>
-              </div>
-            </div>
-            <div
-              class="subject-selection-box row p-1"
-              style="display: flex; justify-content: space-between"
-            >
-              <select class="p-3" id="english" style="margin-right: 10px">
-                <option value="" selected disabled>Select Subject</option>
-                <option value="english">English Language</option>
-              </select>
-              <select id="maths">
-                <option value="" selected disabled>Select Subject</option>
-                <option value="maths">Mathematics</option>
-              </select>
-              <select id="subject3">
-                <option value="" selected disabled>Select Subject</option>
-                <option value="geography">Geography</option>
-                <option value="commerce">Commerce</option>
-                <option value="government">Government</option>
-                <option value="principles">Principles of Accounts</option>
-                <option value="economics">Economics</option>
-                <option value="biology">Biology</option>
-                <option value="chemistry">Chemistry</option>
-              </select>
-              <select id="subject4">
-                <option value="" selected disabled>Select Subject</option>
-                <option value="geography">Geography</option>
-                <option value="commerce">Commerce</option>
-                <option value="government">Government</option>
-                <option value="principles">Principles of Accounts</option>
-                <option value="economics">Economics</option>
-                <option value="biology">Biology</option>
-                <option value="chemistry">Chemistry</option>
-              </select>
-            </div>
-            <p
-              id="eligibility-status"
-              style="
-                display: flex;
-                justify-content: center;
-                padding: 20px;
-                margin-top: 30px;
-                font-weight: 600;
-                font-size: 30px;
-              "
-            ></p>
+              <div class="content col-lg-8 bg-secondary">
+                <div
+                  class="header fs-2"
+                  style="
+                    font-size: 20px;
+                    font-weight: 600;
+                    align-items: center;
+                    text-align: center;
+                    margin-top: 25px;
+                  "
+                >
+                  All applicants who chose The Federal Polytechnic, Ado-Ekiti
+                  and obtained a Minimum Acceptable Mark (MAM) of 140 in the
+                  2023/2024 UTME.
+                </div>
+                <div
+                  class="sub-header"
+                  style="
+                    font-size: 16px;
+                    font-weight: 600;
+                    align-items: center;
+                    text-align: center;
+                    margin-top: 25px;
+                  "
+                >
+                  <i>
+                    kindly select your utme subject combination to check the
+                    available courses for you O` Level</i
+                  >
+                  <div id="courseContent" class="content-section active">
+                    <div class="this-is-a-content">courseContent</div>
+                  </div>
+                  <div id="cgpaContent" class="content-section">
+                    <div class="this-is-a-content">cgpaContent</div>
+                  </div>
+                  <div id="messageContent" class="content-section">
+                    <div class="this-is-a-content">messageContent</div>
+                  </div>
+                </div>
+                <div
+                  class="subject-selection-box row p-1"
+                  style="display: flex; justify-content: space-between"
+                >
+                  <select class="p-3" id="english" style="margin-right: 10px">
+                    <option value="" selected disabled>Select Subject</option>
+                    <option value="english">English Language</option>
+                  </select>
+                  <select id="maths">
+                    <option value="" selected disabled>Select Subject</option>
+                    <option value="maths">Mathematics</option>
+                  </select>
+                  <select id="subject3">
+                    <option value="" selected disabled>Select Subject</option>
+                    <option value="geography">Geography</option>
+                    <option value="commerce">Commerce</option>
+                    <option value="government">Government</option>
+                    <option value="principles">Principles of Accounts</option>
+                    <option value="economics">Economics</option>
+                    <option value="biology">Biology</option>
+                    <option value="chemistry">Chemistry</option>
+                  </select>
+                  <select id="subject4">
+                    <option value="" selected disabled>Select Subject</option>
+                    <option value="geography">Geography</option>
+                    <option value="commerce">Commerce</option>
+                    <option value="government">Government</option>
+                    <option value="principles">Principles of Accounts</option>
+                    <option value="economics">Economics</option>
+                    <option value="biology">Biology</option>
+                    <option value="chemistry">Chemistry</option>
+                  </select>
+                </div>
+                <p
+                  id="eligibility-status"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    padding: 20px;
+                    margin-top: 30px;
+                    font-weight: 600;
+                    font-size: 30px;
+                  "
+                ></p>
 
-            <div
-              class="button row col-lg-12 mt-4"
-              style="display: flex; justify-content: center; padding: 20px"
-            >
-              <button
-                onclick="checkAvailableCourse()"
-                style="padding: 20px; border-radius: 20px; margin-top: 40px"
+                <div
+                  class="button row col-lg-12 mt-4"
+                  style="display: flex; justify-content: center; padding: 20px"
+                >
+                  <button
+                    onclick="checkAvailableCourse()"
+                    style="padding: 20px; border-radius: 20px; margin-top: 40px"
+                  >
+                    Check Available Course
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="check-cgpa content-section row">
+              <div
+                id="cgpaCalculator "
+                style="display: flex; flex-direction: column; gap: 10px"
               >
-                Check Available Course
-              </button>
+                <h2
+                  class=""
+                  style="
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 28px;
+                    color: black;
+                  "
+                >
+                  CGPA Calculator
+                </h2>
+                <h3>
+                  This is a page where you can see the predicted GPA provided
+                  you have a particular score
+                </h3>
+                <div class="p">
+                  PLS NOTE: IF YOU SCORE 0-40 USE <b>D</b>, 41-60 USE <b>C</b>>,
+                  61-75 USE <b> B</b>, 75-ABOVE USE <b>A</b>
+                </div>
+                <div
+                  style="width: 100%"
+                  class="input-container"
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                  "
+                >
+                  <div class="innput">
+                    <label for="gradeA">Grade A:</label>
+                    <input
+                      style="width: 100%"
+                      type="number"
+                      id="gradeA"
+                      min="0"
+                      max="4"
+                      step="0.1"
+                      placeholder="Enter grade A"
+                    />
+                  </div>
+                  <div class="innput">
+                    <label for="gradeB">Grade B:</label>
+                    <input
+                      style="width: 100%"
+                      type="number"
+                      id="gradeB"
+                      min="0"
+                      max="4"
+                      step="0.1"
+                      placeholder="Enter grade B"
+                    />
+                  </div>
+
+                  <div class="innput">
+                    <label for="gradeC">Grade C:</label>
+                    <input
+                      style="width: 100%"
+                      type="number"
+                      id="gradeC"
+                      min="0"
+                      max="4"
+                      step="0.1"
+                      placeholder="Enter grade C"
+                    />
+                  </div>
+
+                  <div class="innput">
+                    <label for="gradeD">Grade D:</label>
+                    <input
+                      style="width: 100%"
+                      type="number"
+                      id="gradeD"
+                      min="0"
+                      max="4"
+                      step="0.1"
+                      placeholder="Enter grade D"
+                    />
+                  </div>
+                </div>
+
+                <button onclick="calculateCGPA()">Calculate CGPA</button>
+
+                <div id="result"></div>
+              </div>
             </div>
-          </div> 
+            <div class="send-message content-section mt-4">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdYFHQ2SvR8Ubfukw1F-lhAoEOJBzF3xwmindcs8yWOmHAx2w/viewform?embedded=true"
+                width="100%"
+                height="1687"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                >Loading…</iframe
+              >
             </div>
-            <div class="check-cgpa content-section">this is check cgpa</div>
-            <div class="send-message content-section">
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYFHQ2SvR8Ubfukw1F-lhAoEOJBzF3xwmindcs8yWOmHAx2w/viewform?embedded=true" width="640" height="1687" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div>
-          </div>
           </div>
         </div>
       </div>
     </div>
+    <script>
+      function calculateCGPA() {
+        const gradeA = parseFloat(document.getElementById('gradeA').value) || 0;
+        const gradeB = parseFloat(document.getElementById('gradeB').value) || 0;
+        const gradeC = parseFloat(document.getElementById('gradeC').value) || 0;
+        const gradeD = parseFloat(document.getElementById('gradeD').value) || 0;
 
+        const totalGradePoints = gradeA + gradeB + gradeC + gradeD;
+        const cgpa = totalGradePoints / 4;
+
+        document.getElementById(
+          'result'
+        ).innerHTML = `<p>Your CGPA is: ${cgpa.toFixed(2)}</p>`;
+      }
+    </script>
     <script>
       function checkAvailableCourse() {
         const english = document.getElementById('english').value;
@@ -246,48 +358,49 @@
         }
       }
     </script>
-   <script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Set the first sidebar element and content section as active
-  const firstSidebarElement = document.querySelector('.sidebar div');
-  const firstContentSection = document.querySelector('.content-section');
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Set the first sidebar element and content section as active
+        const firstSidebarElement = document.querySelector('.sidebar div');
+        const firstContentSection = document.querySelector('.content-section');
 
-  toggleActive(firstSidebarElement);
+        toggleActive(firstSidebarElement);
 
-  // Check if the firstContentSection exists before calling toggleContent
-  if (firstContentSection) {
-    toggleContent(firstContentSection.classList[1]);
-  }
-});
+        // Check if the firstContentSection exists before calling toggleContent
+        if (firstContentSection) {
+          toggleContent(firstContentSection.classList[1]);
+        }
+      });
 
-function toggleContent(contentId) {
-  document
-    .querySelectorAll('.content-section')
-    .forEach((section) => section.classList.remove('active'));
-  document.getElementById(contentId).classList.add('active');
-}
+      function toggleContent(contentId) {
+        document
+          .querySelectorAll('.content-section')
+          .forEach((section) => section.classList.remove('active'));
+        document.getElementById(contentId).classList.add('active');
+      }
 
-function toggleActive(element) {
-  document
-    .querySelectorAll('.check-course, .check-cgpa, .send-a-message')
-    .forEach((el) => el.classList.remove('active'));
+      function toggleActive(element) {
+        document
+          .querySelectorAll('.check-course, .check-cgpa, .send-a-message')
+          .forEach((el) => el.classList.remove('active'));
 
-  element.classList.add('active');
+        element.classList.add('active');
 
-  // Get the corresponding content section class
-  const contentClass = element.classList.contains('check-course')
-    ? 'check-status'
-    : element.classList.contains('check-cgpa')
-    ? 'check-cgpa'
-    : 'send-message';
+        // Get the corresponding content section class
+        const contentClass = element.classList.contains('check-course')
+          ? 'check-status'
+          : element.classList.contains('check-cgpa')
+          ? 'check-cgpa'
+          : 'send-message';
 
-  // Show or hide content div based on the clicked element
-  document.querySelectorAll('.content-section').forEach((section) => {
-    section.style.display = section.classList.contains(contentClass) ? 'block' : 'none';
-  });
-}
-
-  </script>
+        // Show or hide content div based on the clicked element
+        document.querySelectorAll('.content-section').forEach((section) => {
+          section.style.display = section.classList.contains(contentClass)
+            ? 'block'
+            : 'none';
+        });
+      }
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

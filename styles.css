@@ -68,17 +68,14 @@ main {
   color: white;
 }
 
-.check-course.active,
-.check-course:hover {
+.check-course.active {
   background-color: blue;
 }
 
-.check-cgpa.active,
-.check-cgpa:hover {
+.check-cgpa.active {
   background-color: blue;
 }
-.send-a-message.active,
-.check-cgpa:hover {
+.send-a-message.active {
   background-color: blue;
 }
 
