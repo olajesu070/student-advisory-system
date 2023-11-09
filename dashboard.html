@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Your Project Title - Dashboard</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="bg-primary text-white text-center py-4">
+        <h1>
+          DESIGN AND IMPLEMENTATION OF A WEB-BASED STUDENTS ACADEMIC ADVISORY
+          SYSTEM
+        </h1>
+      </header>
+      <div class="container-fluid mt-4 bg-secondary" style="min-height: 100vh">
+        <div class="row">
+          <div class="sidebar col-lg-4 bg-primary" style="min-height: 100vh">
+            <div
+              class="check-course active"
+              onclick="toggleActive(this, 'check-status')"
+            >
+              Check Course with O level
+            </div>
+            <div class="check-cgpa" onclick="toggleActive(this, 'check-cgpa')">Check GPA</div>
+
+            <div
+              class="send-a-message"
+              onclick="toggleActive(this, 'send-message')"
+            >
+              Send a message
+            </div>
+          </div>
+
+          <div class="content col-lg-8 bg-secondary">
+            <div class="check-status content-section">
+               <div class="content col-lg-8 bg-secondary">
+            <div
+              class="header fs-2"
+              style="
+                font-size: 20px;
+                font-weight: 600;
+                align-items: center;
+                text-align: center;
+                margin-top: 25px;
+              "
+            >
+              All applicants who chose The Federal Polytechnic, Ado-Ekiti and
+              obtained a Minimum Acceptable Mark (MAM) of 140 in the 2023/2024
+              UTME.
+            </div>
+            <div
+              class="sub-header"
+              style="
+                font-size: 16px;
+                font-weight: 600;
+                align-items: center;
+                text-align: center;
+                margin-top: 25px;
+              "
+            >
+              <i>
+                kindly select your utme subject combination to check the
+                available courses for you O` Level</i
+              >
+              <div id="courseContent" class="content-section active">
+                <div class="this-is-a-content">courseContent</div>
+              </div>
+              <div id="cgpaContent" class="content-section">
+                <div class="this-is-a-content">cgpaContent</div>
+              </div>
+              <div id="messageContent" class="content-section">
+                <div class="this-is-a-content">messageContent</div>
+              </div>
+            </div>
+            <div
+              class="subject-selection-box row p-1"
+              style="display: flex; justify-content: space-between"
+            >
+              <select class="p-3" id="english" style="margin-right: 10px">
+                <option value="" selected disabled>Select Subject</option>
+                <option value="english">English Language</option>
+              </select>
+              <select id="maths">
+                <option value="" selected disabled>Select Subject</option>
+                <option value="maths">Mathematics</option>
+              </select>
+              <select id="subject3">
+                <option value="" selected disabled>Select Subject</option>
+                <option value="geography">Geography</option>
+                <option value="commerce">Commerce</option>
+                <option value="government">Government</option>
+                <option value="principles">Principles of Accounts</option>
+                <option value="economics">Economics</option>
+                <option value="biology">Biology</option>
+                <option value="chemistry">Chemistry</option>
+              </select>
+              <select id="subject4">
+                <option value="" selected disabled>Select Subject</option>
+                <option value="geography">Geography</option>
+                <option value="commerce">Commerce</option>
+                <option value="government">Government</option>
+                <option value="principles">Principles of Accounts</option>
+                <option value="economics">Economics</option>
+                <option value="biology">Biology</option>
+                <option value="chemistry">Chemistry</option>
+              </select>
+            </div>
+            <p
+              id="eligibility-status"
+              style="
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+                margin-top: 30px;
+                font-weight: 600;
+                font-size: 30px;
+              "
+            ></p>
+
+            <div
+              class="button row col-lg-12 mt-4"
+              style="display: flex; justify-content: center; padding: 20px"
+            >
+              <button
+                onclick="checkAvailableCourse()"
+                style="padding: 20px; border-radius: 20px; margin-top: 40px"
+              >
+                Check Available Course
+              </button>
+            </div>
+          </div> 
+            </div>
+            <div class="check-cgpa content-section">this is check cgpa</div>
+            <div class="send-message content-section">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYFHQ2SvR8Ubfukw1F-lhAoEOJBzF3xwmindcs8yWOmHAx2w/viewform?embedded=true" width="640" height="1687" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function checkAvailableCourse() {
+        const english = document.getElementById('english').value;
+        const maths = document.getElementById('maths').value;
+        const subject3 = document.getElementById('subject3').value;
+        const subject4 = document.getElementById('subject4').value;
+        const eligibilityStatus = document.getElementById('eligibility-status');
+
+        // Define the eligibility criteria for each course
+        const courses = [
+          {
+            name: 'Computer Science',
+            subjects: ['english', 'maths', 'chemistry', 'biology'],
+          },
+          {
+            name: 'Business Administration',
+            subjects: ['english', 'maths', 'geography', 'commerce'],
+          },
+          {
+            name: 'Banking and Finance',
+            subjects: [
+              'english',
+              'maths',
+              'geography',
+              'commerce',
+              'insurance',
+            ],
+          },
+          {
+            name: 'Mass Communication',
+            subjects: [
+              'english',
+              'maths',
+              'geography',
+              'commerce',
+              'government',
+            ],
+          },
+          {
+            name: 'Marketing',
+            subjects: [
+              'english',
+              'maths',
+              'geography',
+              'commerce',
+              'principles',
+            ],
+          },
+          {
+            name: 'OTM',
+            subjects: [
+              'english',
+              'maths',
+              'commerce',
+              'government',
+              'principles',
+            ],
+          },
+          {
+            name: 'Procurement and Supply Chain Management',
+            subjects: [
+              'english',
+              'maths',
+              'geography',
+              'commerce',
+              'government',
+              'store-management',
+            ],
+          },
+          {
+            name: 'Taxation',
+            subjects: [
+              'english',
+              'maths',
+              'geography',
+              'commerce',
+              'government',
+              'principles',
+            ],
+          },
+        ];
+
+        // Check if selected subjects match any course criteria
+        const matchedCourse = courses.find((course) => {
+          return (
+            course.subjects.includes(english) &&
+            course.subjects.includes(maths) &&
+            course.subjects.includes(subject3) &&
+            course.subjects.includes(subject4)
+          );
+        });
+
+        if (matchedCourse) {
+          eligibilityStatus.textContent =
+            'Available Course: ' + matchedCourse.name;
+        } else {
+          eligibilityStatus.textContent = 'Not eligible for any course.';
+        }
+      }
+    </script>
+   <script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Set the first sidebar element and content section as active
+  const firstSidebarElement = document.querySelector('.sidebar div');
+  const firstContentSection = document.querySelector('.content-section');
+
+  toggleActive(firstSidebarElement);
+
+  // Check if the firstContentSection exists before calling toggleContent
+  if (firstContentSection) {
+    toggleContent(firstContentSection.classList[1]);
+  }
+});
+
+function toggleContent(contentId) {
+  document
+    .querySelectorAll('.content-section')
+    .forEach((section) => section.classList.remove('active'));
+  document.getElementById(contentId).classList.add('active');
+}
+
+function toggleActive(element) {
+  document
+    .querySelectorAll('.check-course, .check-cgpa, .send-a-message')
+    .forEach((el) => el.classList.remove('active'));
+
+  element.classList.add('active');
+
+  // Get the corresponding content section class
+  const contentClass = element.classList.contains('check-course')
+    ? 'check-status'
+    : element.classList.contains('check-cgpa')
+    ? 'check-cgpa'
+    : 'send-message';
+
+  // Show or hide content div based on the clicked element
+  document.querySelectorAll('.content-section').forEach((section) => {
+    section.style.display = section.classList.contains(contentClass) ? 'block' : 'none';
+  });
+}
+
+  </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
